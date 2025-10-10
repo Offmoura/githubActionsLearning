@@ -62,5 +62,5 @@ jobs:
     needs: build
     uses: offmoura/pipeline_templates/.github/workflows/demo-deploy.yaml@main
     with:
-      variavel-demo "Demo Dev"
+      variavel-demo: "Demo Dev"
     
