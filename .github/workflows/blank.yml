@@ -36,7 +36,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-  deploy-dev: 
+  deploy-hml: 
     needs: build
     environment: 
       name: desenvolvimento
@@ -57,3 +57,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+  deploy-dev: 
+    needs: build
+    uses: offmoura/pipeline_templates/.github/workflows/demo-deploy.yaml@main
+    with:
+      variavel-demo "Demo Dev"
+    
